@@ -33,6 +33,7 @@
 @import url(./blocks/photos/__element/photos__element.css);
 @import url(./blocks/photos/__photo/photos__photo.css);
 @import url(./blocks/photos/__delete-button/photos__delete-button.css);
+@import url(./blocks/photos/__delete-button/_hidden/photos__delete-button_hidden.css);
 @import url(./blocks/photos/__photo-caption/photos__photo-caption.css);
 @import url(./blocks/photos/__photo-title/photos__photo-title.css);
 @import url(./blocks/photos/__like-container/photos__like-container.css);

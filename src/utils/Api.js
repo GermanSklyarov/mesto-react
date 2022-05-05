@@ -74,24 +74,24 @@ class Api {
       .then(this._checkResponse);
   }
 
-  addLike(cardId) {
-    return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
-      method: 'PUT',
-      headers: {
-        authorization: this._headers.authorization
-      }
-    })
-      .then(this._checkResponse);
-  }
-
-  removeLike(cardId) {
-    return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
-      method: 'DELETE',
-      headers: {
-        authorization: this._headers.authorization
-      }
-    })
-      .then(this._checkResponse);
+  changeLikeCardStatus(cardId, isLiked) {
+    if (isLiked) {
+      return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
+        method: 'DELETE',
+        headers: {
+          authorization: this._headers.authorization
+        }
+      })
+        .then(this._checkResponse);
+    } else {
+      return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
+        method: 'PUT',
+        headers: {
+          authorization: this._headers.authorization
+        }
+      })
+        .then(this._checkResponse);
+    }
   }
 }
 
